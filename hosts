@@ -1,0 +1,15 @@
+## inventory file for vagrant machines
+core-01 ansible_ssh_host=172.17.8.101
+core-02 ansible_ssh_host=172.17.8.102
+core-03 ansible_ssh_host=172.17.8.103
+
+[coreos]
+core-01
+core-02
+core-03
+
+[coreos:vars]
+ansible_connection=ssh
+ansible_user=core
+ansible_python_interpreter=/opt/bin/python
+ansible_become=true
